@@ -1,0 +1,497 @@
+---
+title: "Optimal Control, Planning, and Intelligent Vehicles"
+subtitle: "Leveraging optimal control and sampling-based methods for motion planning in autonomous driving"
+bibliography: bibliography.bib
+cls: IEEEtran.cls
+author: 
+  - name: "Mattia Piazza"
+    # email: "mattia.piazza@unitn.it"
+    affiliation: "PhD Candidate at the University of Trento, Italy"
+# date: today
+date: "2025-11-13"
+# date-format: long
+date-format: "D MMMM YYYY"
+resources: data
+execute: 
+  enabled: true
+slide-level: 2
+format:
+  revealjs: 
+    # Output file
+    output-file: index.html
+    # Table of Contents
+    toc: true
+    toc_float: true
+    toc-depth: 1
+    toc-location: body
+    toc-title: "Contents"
+    # Generate a self-contained file
+    # self-contained: true
+    self-contained-math: true
+    # template-partials:
+    #   - title-slide.html
+    theme: [ custom.scss]
+    slideNumber: true
+    center: false 
+    transition: slide
+    # logo and footer: 
+    # logo: unitn.png
+    footer: "Mattia Piazza | University of Trento, Italy"
+    auto-play-media: true
+    width: 1920
+    height: 1080
+    # html-math-method: katex #mathjax
+    html-math-method: 
+      method: mathjax
+    code-fold: true
+    # chalkboard: true
+    filters: [custom.lua]
+---
+
+# Background
+
+## My Background 
+### Personal experience and research activity
+
+:::{.round-img-gray style="width: 20%; position: absolute; top: -10%; left: 80%;"}
+![](./data/people/mattia_piazza.jpeg)
+:::
+
+<br>
+<br>
+
+:::{.timeline}
+
+:::{.item style="width: 20%; background-color: var(--secondary-color_light);"}
+:::{.img-wrapper style="width: 95%;"}
+![](./data/logos/UniudDPIA.png)
+![](./data/logos/Unitn_logos/Dip_Ing_Industriale_col.png)
+:::
+
+:::{.arrow style="background-color: var(--primary-color);"}
+2013-2020
+:::
+:::{.text}
+- BSc in Mechanical Engineering 
+- MSc in Mechatronics Engineering
+- Optimal control 
+- MLT for Motorcycles
+:::
+:::
+
+:::{.item style="width: 20%; background-color: var(--primary-color_light);"}
+:::{.img-wrapper style="width: 100%;"}
+![](./data/logos/Unitn_logos/UniTrento_logo_ENG_colore.png){width=120%}
+![](https://static.dorna.com/assets/logos/mgp/brand/mgp-logo-on-light.svg?v2){width=70%}
+:::
+:::{.arrow style="background-color: var(--secondary-color);"}
+2020-2022
+:::
+:::{.text}
+- Research Fellowship
+- MLT for MotoGP Racing Team
+:::
+:::
+
+:::{.item style="width: 20%; background-color: var(--secondary-color_light);"}
+:::{.img-wrapper style="width: 100%;"}
+![](./data/third_party/StellantisLogoshort.png){width=75%}
+![](./data/third_party/VeDi2025-logo.png){width=75%}
+![](./data/third_party/SunriseHD.png){width=75%}
+:::
+:::{.arrow style="background-color: var(--primary-color);"}
+2022-2025
+:::
+:::{.text}
+- PhD in Mechatronics and Systems Engineering
+- OCP, Planning and AD
+- Industrial collaborations
+- MISE and Horizon Europe projects
+:::
+:::
+
+:::{.item style="width: 20%; background-color: var(--primary-color_light);"}
+:::{.img-wrapper style="width: 100%;"}
+![](./data/logos/Unitn_logos/UniTrento_logo_ENG_colore.png){width=100%}
+![](./data/logos/TUM_Logo_2.png){width=50%}
+:::
+:::{.arrow style="background-color: var(--secondary-color);"}
+2025
+:::
+:::{.text}
+- Visiting at TUM (Munich, Germany)
+- MLT for IAC and A2RL.
+:::
+:::
+
+:::{.item style="width: 20%; background-color: var(--secondary-color_light);"}
+:::{.img-wrapper}
+![](./data/logos/Unitn_logos/UniTrento_logo_ENG_colore.png){width=120%}
+<!-- ![](https://static.dorna.com/assets/logos/mgp/brand/mgp-logo-on-light.svg?v2){width=70%} -->
+:::
+
+:::{.arrow style="background-color: var(--primary-color);"}
+now - future
+:::
+:::{.text}
+- Finish my PhD
+- Exploit my research for new applications
+<!-- - Start some fruitful collaborations -->
+:::
+:::
+
+
+
+::: 
+<!-- timeline end -->
+
+# Research achievements
+
+## Contributions
+
+### Semi-structured RRT* planner
+
+:::{.tbbox}
+<!-- #### My Custom Title -->
+::: {.titlebox}
+MPTree
+:::
+
+:::{.columns}
+
+:::: {.column width="80%"}
+
+Given a simple set of constraints the planner is able to
+
+- compute feasible and optimal trajectory.
+- handle dynamic obstacles.
+- provide finite time guarantees.
+
+::::
+
+:::: {.column width="20%"}
+![](./data/logos/MPTree_logo.png)
+::::
+:::
+
+:::
+
+:::{.tbbox}
+<!-- #### My Custom Title -->
+::: {.titlebox}
+Specialized Framework
+:::
+- **Autonomous Racing** MPTreeRace
+- **Urban Driving** UrbanMPTree
+:::
+
+
+## Contributions
+### C++ implementation and commercial software integration, SIL and HIL testing
+
+:::{.notes}
+It is not just that we went beyond the first idea and implementation and I coded the planner in a C++ library which was then integrated inside IPG CarMaker (Industrial simulator) and RTMaps to properly perform SIL testing with all the car subsystems. Furthermore, we tested the planner with real-world testing with Stellantis.
+:::
+
+:::{.tbbox}
+:::{.columns}
+:::: {.column width="70%"}
+- Fast **C++** implementation of the planner.
+- Integration with **IPG CarMaker**.
+- Integration inside **RTMaps** and **dSpace** Autera.
+- Real-world testing with **Stellantis**.
+::::
+:::: {.column width="30%"}
+::::
+:::
+
+:::{.columns}
+:::: {.column width="33%"}
+![](./data/third_party/IPG-Automotive-logo.png){width=90% fig-align="center"}
+::::
+:::: {.column width="33%"}
+![](./data/third_party/dSpace_logo.png){width=90% fig-align="center"}
+::::
+:::: {.column width="33%" }
+![](./data/third_party/StellantisLogoshort.png){width=90% fig-align="center"}
+::::
+:::
+
+:::
+
+
+
+
+## Motion Primitives
+
+### Common Lateral
+
+:::{.columns}
+:::: {.column width="50%"}
+:::{.tbbox}
+<!-- #### My Custom Title -->
+::: {.titlebox}
+Formulation
+:::
+
+**$G^2$ clothoids** and **continuous curvature**.
+
+
+$$
+\begin{array}{r@{~}c@{~}l}
+  &\displaystyle \min_{c(s)}& \; L\\
+  &\mathrm{s.t}.&\left\{
+  \begin{aligned}
+    x^\prime(s)&=\cos{\theta}(s)\\
+    y^\prime(s)&=\sin{\theta}(s)\\
+    \theta^\prime(s)&=\kappa(s)\\
+    \kappa^\prime(s)&=c(s) 
+  \end{aligned}
+  \right. \\
+  &\mathrm{b.c.}& \left\{
+  \begin{aligned}
+    x(0) &= x_0, \; \\
+    \theta(0) &= \theta_0, \; \\
+    x(L) &= x_L, \; \\ 
+    \theta(L) &= \theta_L, \; 
+  \end{aligned}
+  \begin{aligned}
+    y(0) &= y_0, \\
+    \kappa(0) &= \kappa_0\\
+    y(L) &= y_L, \\ 
+    \kappa(L) &= \kappa_L
+  \end{aligned}
+  \right.
+\end{array}
+$$
+
+:::
+::::
+:::: {.column width="50%"}
+<br>
+<br>
+<br>
+
+![](./data/MP/CLOTH_N_road_K_road.png)
+::::
+:::
+
+## Motion Primitives
+### Urban longitudinal (Analytical)
+
+:::{.columns}
+:::: {.column width="50%"}
+:::{.tbbox}
+<!-- #### My Custom Title -->
+::: {.titlebox}
+Formulation
+:::
+
+$$
+  \begin{array}{r@{~}c@{~}l}
+    &\displaystyle \min_{j_x(t)}& \; {\displaystyle \int_{0}^{T}{\big(w_T+j_x(t)^2\big)\,\mathrm{d} t}}  \\ \\
+    &\mathrm{s.t.}& \left\{
+    \begin{aligned}
+      \dot{s}(t)&=v_x(t)\\
+      \dot{v}_x(t)&=a_x(t)\\
+      \dot{a}_x(t)&=j_x(t)
+    \end{aligned}
+    \right.\\
+    &\mathrm{b.c.}& \left\{
+    \begin{aligned}
+      s(0)&=\ 0, \;\\
+      v_x(0)&=v_0,\;\\
+      a_x(0)&=a_0\;,
+    \end{aligned}
+    \begin{aligned}
+      s(T)&=L\\
+      v_x(T)&=v_T\\
+      a_x(T)&=a_T
+    \end{aligned}
+    \right.\\
+    \;
+  \end{array}
+$$
+:::
+::::
+:::: {.column width="50%"}
+<br>
+<br>
+<br>
+
+![](./data/MP/MP_1020_space.png)
+::::
+:::
+
+## Motion Primitives
+### Racing longitudinal (Forward-Backward)
+
+:::{.notes}
+For the racing application, we employ a different primitive. It is again an optimal control solution. but the dynamics is a bit more complex and takes directly into account the curvature of the profile. In this case we do not minimize the jerk but just the time. And we obtain a solution at the maximum performance.
+:::
+
+:::{.columns}
+:::: {.column width="50%"}
+:::{.tbbox}
+<!-- #### My Custom Title -->
+::: {.titlebox}
+Formulation
+:::
+
+$$
+  \begin{array}{r@{~}c@{~}l}
+    &\displaystyle \min_{a_x \in \mathbb A}& \; T \\
+    &\mathrm{s.t.}& \left\{
+    \begin{aligned}
+      \dot{s}&=v_x\\
+      \dot{v}_x&=a_x - c\,v_x - d\,v_x^2\\
+      a_{x_{\mathrm{min}}} &\leq a_x \leq a_{x_{\mathrm{max}}}\\
+      % |a_y| &\leq& a_{y_{\mathrm{max}}} 
+      a_{y_{\mathrm{max}}} &\geq |a_y| = \kappa~v_x^2
+    \end{aligned}
+    \right.\;\\
+    &\mathrm{b.c.}& \left\{
+    \begin{aligned}
+      s(0)&=0\\
+      s(T)&=L\\
+      v_x(0)&=v_0\\
+      v_x(T)&=v_T
+    \end{aligned}
+    \right.
+  \end{array}
+$$
+:::
+::::
+:::: {.column width="50%"}
+<br>
+<br>
+<br>
+
+![](./data/MP/MP_FWBW_space.png)
+::::
+:::
+
+
+
+## Simulation results 
+
+### MPTree race
+
+<div id="contentframe" style="position:relative; left: 10%; width: 90%; height: 90%">
+{{< video https://www.youtube.com/embed/INeFcYHTh58?rel=0  width="90%" height="90%" autoplay="true" loop="true" muted="true">}}
+</div>
+
+## Simulation results
+
+### MPTree Urban (Matlab)
+
+<div id="contentframe" style="position:relative; left: 10%; width: 90%; height: 90%">
+{{< video https://www.youtube.com/embed/pt_zcB4BlT4?rel=0  width="90%" height="94.45%" autoplay="true" loop="true" muted="true">}}
+</div>
+
+## Simulation results 
+
+### MPTree urban uncooperative negotiation (Matlab) [VeDi 2025]
+
+<div id="contentframe" style="position:relative; left: 2.5%; width: 100%; height: 90%">
+{{< video https://www.youtube.com/embed/ZGPrtMU95nA?rel=0  width="100%" height=90.40% autoplay="true" loop="true" muted="true">}} 
+</div>
+
+## Simulation results 
+
+### MPTree urban cooperative negotiation (Matlab) [VeDi 2025]
+
+<div id="contentframe" style="position:relative; left: 2.5%; width: 100%; height: 90%">
+{{< video https://www.youtube.com/embed/2HqBKIeUNFc?rel=0  width="100%" height=90.40% autoplay="true" loop="true" muted="true">}}
+</div>
+
+## Integration in carmaker (VeDi 2025)
+
+### SIL testing for negotiation
+
+:::{.notes}
+After demonstrating the potential of the approach in Matlab we implemented the planner in C++ and integrated it in IPG CarMaker. Here we have some results of the planner in action with complete real vehicle model and other subsystems simulated
+:::
+
+:::{.columns}
+:::: {.column width="58.4%"}
+{{< video https://www.youtube.com/embed/R3iCVDXGoao?rel=0  width="100%" height=600 autoplay="true" loop="true" muted="true">}}
+
+<div style="text-align: center;">EGO 0</div>
+::::
+::::{.column width="41.6%"}
+{{< video https://www.youtube.com/embed/5qmvcFmvGVE?rel=0  width="100%" height=600 autoplay="true" loop="true" muted="true">}}
+
+<div style="text-align: center;">EGO 1</div>
+::::
+:::
+
+
+## Real vehicle testing (VeDi 2025)
+
+### VIL testing 
+
+:::{.notes}
+Here I can only show this frames with my planner running and driving Stellantis car inside the test site in Bolzano.
+:::
+
+```{=html}
+<!-- add video -->
+<div style="display: flex; justify-content: center; padding: 0px;">
+  <video width="80%" height="70%" autoplay loop muted controls padding="0px">
+    <source src="data/videos/videoVadenaAutonomous.mp4" type="video/mp4">
+    <!-- <source src="/Users/mattiapiazza/git/Personal/ResearchPresentation/data/videos/videoVadenaAutonomous.mp4" type="video/mp4"> -->
+  </video>
+</div>
+```
+
+
+## Limits and future works 
+### Monte Carlo Tree Search
+
+
+<div id="contentframe" style="position:relative; left: 22%; width: 56%; height: 90%">
+{{< video https://www.youtube.com/embed/PwzN7FfxiCc?rel=0  width="100%" height="95%" autoplay="true" loop="true" muted="true">}}
+</div>
+
+
+
+
+## MLT for MotoGP
+### Solution example Catalunya RSV1000
+
+<div id="contentframe" style="position:relative; left: 10%; width: 90%; height: 90%">
+{{< video https://www.youtube.com/embed/b1tqsGL5tgA?rel=0  width="100%" height="87%" autoplay="true" loop="true" muted="true">}}
+</div>
+
+
+
+## References
+
+::: {#refs}
+:::
+
+
+## {background-video="data/third_party/end.mov" background-video-loop="true" background-video-muted="true" background-video-autoplay="true" }
+
+<br>
+<br>
+<br>
+
+::: {.tbbox style="text-align: center;"}
+<!-- #### Q & A -->
+::: {.columns}
+:::: {.column width="90%"}
+::: {.r-fit-text style="font-weight: bold; font-size: 2em;"}
+Thank you for your attention
+:::
+::::
+:::
+Reach me at: [**mattia.piazza@unitn.it**](mailto:*mattia.piazza@unitn.it)
+<!-- ##### Danke für Ihre Aufmerksamkeit! -->
+:::
+
+
+<!-- # Backup {.appendix .unnumbered .unlisted} -->
+
+
