@@ -305,16 +305,10 @@ MPTree
 Here I can only show this frames with my planner running and driving Stellantis car inside the test site in Bolzano.
 :::
 
-```{=html}
-<!-- add video -->
-<div style="display: flex; justify-content: center; padding: 0px;">
-  <video width="80%" height="70%" autoplay loop muted controls padding="0px">
-    <source src="data/videos/videoVadenaAutonomous.mp4" type="video/mp4">
-    <!-- <source src="/Users/mattiapiazza/git/Personal/ResearchPresentation/data/videos/videoVadenaAutonomous.mp4" type="video/mp4"> -->
-  </video>
-</div>
-```
 
+<div id="contentframe" style="position:relative; left: 10%; width: 80%; height: 80%">
+{{< video https://www.youtube.com/embed/WEdmq2CjoQ4?rel=0  width="100%" height="100%" controls muted autoplay loop>}}
+</div>
 
 ## Sampling based planners for autonomous driving
 ### Monte Carlo Tree Search
