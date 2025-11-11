@@ -150,54 +150,41 @@ now - future
 
 <!-- Here i have to do a table listing all my programming languages known, softwares/tools, and additional skills or sotware used -->
 
-:::{.columns}
+::: {#tbl-panel layout-ncol=3}
 
-:::: {.column width="30%"}
-:::{.tbbox}
-::: {.titlebox}
-Languages
-:::
-|  | Level |
+| Languages | Level |
 |:---|:---|
-| C++ | Advanced |
-| Matlab | Advanced |
-| Maple | Intermediate |
-| Mathematica | Intermediate |
-| Python | Intermediate |
-| Ruby | Basic |
-| Simulink | Base |
-:::
-::::
+| C++ | [Advanced]{style="color:green;"} |
+| Matlab | [Advanced]{style="color:green;"} |
+| Maple | [Intermediate]{style="color:var(--primary-color);"} |
+| Mathematica | [Intermediate]{style="color:var(--primary-color);"} |
+| Python | [Intermediate]{style="color:var(--primary-color);"} |
+| Ruby | [Base]{style="color:var(--secondary-color);"} |
+| Simulink | [Base]{style="color:var(--secondary-color);"} |
 
-:::: {.column width="30%"}
+: First Table {#tbl-first}
 
-:::{.tbbox}
-::: {.titlebox}
-Tools
-:::
-|  | Level |
+| Tools | Level |
 |:---|:---|
-| git/GitHub | Advanced |
-| LaTeX/QMD | Advanced |
-| PINS | Advanced |
-| cmake/make | Intermediate |
-| Carmaker | Intermediate |
-| RTMaps | Base |
-| CasADi | Base |
-:::
-::::
+| git/GitHub | [Advanced]{style="color:green;"} |
+| LaTeX/QMD | [Advanced]{style="color:green;"} |
+| PINS | [Advanced]{style="color:green;"} |
+| cmake/make | [Intermediate]{style="color:var(--primary-color);"} |
+| Carmaker | [Intermediate]{style="color:var(--primary-color);"} |
+| RTMaps | [Base]{style="color:var(--secondary-color);"} |
+| CasADi | [Base]{style="color:var(--secondary-color);"} |
 
-::::{.column width="34%"}
-:::{.tbbox}
-::: {.titlebox}
-Additional 
-:::
-- Black belt in UniTN bureaucracy
-- F1TENT (minimal experience)
-- ROS2 (minimal experience)
-:::
-::::
+: Second Table {#tbl-second}
 
+| Additional | Level |
+|:---|:---|
+| UniTN bureaucracy | [Black belt]{style="color:green;"} |
+| F1TENT | [Minimal experience]{style="color:var(--secondary-color);"} |
+| ROS2 | [Minimal experience]{style="color:var(--secondary-color);"} |
+
+: Third Table {#tbl-third}
+
+Skills
 :::
 
 # Research achievements
